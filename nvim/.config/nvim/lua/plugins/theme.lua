@@ -1,0 +1,1 @@
+/home/micah/.config/omarchy/current/theme/neovim.lua

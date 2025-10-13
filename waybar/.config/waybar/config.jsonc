@@ -1,0 +1,28 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "left",
+  "spacing": 0,
+  "width": 0,
+  "height": 12,
+  "modules-center": ["hyprland/workspaces","custom/separator", "clock"],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "◯",
+      "active": "◉",
+    },
+  },
+"custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+},
+  "clock": {
+    "format": "{:%I\n%M}",
+    "tooltip": false,
+  },
+}
+
+

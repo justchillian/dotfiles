@@ -1,0 +1,50 @@
+
+########### font ###############
+
+font-family =  Monaspace KryptonNF WideExtraBold
+font-size = 16
+font-thicken=true
+
+#################################
+
+
+
+########### window ##############
+
+
+background = #000000
+background-opacity = 0.1
+background-blur = 120  
+window-padding-x = 60
+window-padding-y = 80, 0
+adjust-cell-height = 10
+window-padding-balance=true
+macos-titlebar-style = hidden
+window-colorspace = srgb
+macos-secure-input-indication = true
+cursor-style = "block"
+cursor-style-blink = false
+shell-integration-features = "no-cursor"
+cursor-text= #EDE4DC
+cursor-color= #EEEEEE
+window-decoration= none
+confirm-close-surface = false
+
+
+
+################################
+
+
+
+########### shell ##############
+
+shell-integration = zsh
+
+################################
+
+
+custom-shader = ~/.config/ghostty/shaders/bettercrt.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor-frozen.glsl
+# custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+# custom-shader = ~/.config/ghostty/shaders/glow-rgbsplit-twitchy.glsl
+#
