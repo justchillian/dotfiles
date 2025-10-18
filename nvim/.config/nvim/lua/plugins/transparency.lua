@@ -43,3 +43,18 @@ vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { bg = "none" })
+
+-- Make line numbers and sign column transparent
+vim.cmd([[
+  highlight clear SignColumn
+  highlight clear LineNr
+  highlight clear CursorLineNr
+  highlight! link SignColumn Normal
+  highlight! link LineNr Normal
+  highlight! link CursorLineNr Normal
+]])
+
+vim.cmd([[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NormalNC guibg=NONE ctermbg=NONE
+]])

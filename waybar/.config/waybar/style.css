@@ -1,7 +1,6 @@
-@import "../omarchy/current/theme/waybar.css";
 
 * {
-  background-color: @background;
+  background-color: transparent;
   color: #000;
 
   border: none;
