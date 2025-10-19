@@ -71,9 +71,9 @@ case "$OSTYPE" in
     ;;
   *)
     if test-ls-args ls --color; then
-      alias ls='ls --color=tty'
+      alias lsc='ls --color=tty'
     elif test-ls-args ls -G; then
-      alias ls='ls -G'
+      alias lsg='ls -G'
     fi
     ;;
 esac
