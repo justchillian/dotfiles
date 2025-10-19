@@ -1,42 +1,27 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-
--- Transparent UI groups
+require('config.lazy')
 vim.cmd([[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NormalNC guibg=NONE ctermbg=NONE
-  highlight SignColumn guibg=NONE
-  highlight VertSplit guibg=NONE
-  highlight StatusLine guibg=NONE
-  highlight LineNr guibg=NONE
-  highlight CursorLineNr guibg=NONE
-  highlight NonText guibg=NONE
-  highlight EndOfBuffer guibg=NONE
+  highlight WinSeparator guibg=NONE guifg=NONE
+  highlight NoiceCmdlinePopupBorder guifg=NONE guibg=NONE
+  highlight FloatBorder guifg=NONE guibg=NONE
+  highlight NormalFloat guibg=NONE
+  highlight MsgArea guibg=NONE guifg=NONE
+  highlight Cmdline guibg=NONE guifg=#e9e9e9
+  highlight VertSplit guifg=NONE guibg=NONE
+  highlight CursorLine guibg=NONE
+  highlight LineNr guifg=NONE
+  highlight CursorLineNr guifg=#e9e9e9 gui=bold
+  highlight NvimTreeIndentMarker guifg=NONE
 ]])
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.cmd([[
-      highlight Normal guibg=NONE ctermbg=NONE
-      highlight NormalNC guibg=NONE ctermbg=NONE
-      highlight SignColumn guibg=NONE
-      highlight VertSplit guibg=NONE
-      highlight StatusLine guibg=NONE
-      highlight LineNr guibg=NONE
-      highlight CursorLineNr guibg=NONE
-      highlight NonText guibg=NONE
-      highlight EndOfBuffer guibg=NONE
-    ]])
-  end,
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'VertSplit', { bg = 'NONE', fg = 'NONE' })
+vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'NONE' })
+
+require('gitsigns').setup({
+  signcolumn = false,
 })
-
-vim.cmd([[
-  highlight NvimTreeNormal guibg=NONE
-  highlight NvimTreeNormalNC guibg=NONE
-  highlight NvimTreeEndOfBuffer guibg=NONE
-]])
-
-vim.cmd([[
-  highlight VertSplit guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE
-]])
+vim.notify = function() end
