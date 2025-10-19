@@ -5,7 +5,13 @@ ZSH_THEME="bira"
 
 # Intialize Shell for third party services
 eval "$(zoxide init zsh)"
-eval "$(ssh-agent -s)" # github
+
+
+eval "$(ssh-agent -s)" > /dev/null 2>&1
+
+if ! ssh-add -l | grep -q "github_key"; then
+    ssh-add ~/.ssh/github_key > /dev/null 2>&1
+fi
 
 # Aliases
   # File system
