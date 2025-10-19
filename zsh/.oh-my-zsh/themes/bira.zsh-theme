@@ -19,10 +19,10 @@ PROMPT="╭─${conda_prompt} ${current_dir}${rvm_ruby}${vcs_branch}${venv_promp
 ╰─%B%b "
 RPROMPT="%B${return_code}%b"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}●%{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}●%{$fg[white]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
 ZSH_THEME_HG_PROMPT_PREFIX="$ZSH_THEME_GIT_PROMPT_PREFIX"
 ZSH_THEME_HG_PROMPT_SUFFIX="$ZSH_THEME_GIT_PROMPT_SUFFIX"

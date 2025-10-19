@@ -5,6 +5,7 @@ ZSH_THEME="bira"
 
 # Intialize Shell for third party services
 eval "$(zoxide init zsh)"
+eval "$(ssh-agent -s)" # github
 
 # Aliases
   # File system
