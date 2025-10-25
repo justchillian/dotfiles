@@ -1,28 +1,42 @@
-{
-  "reload_style_on_change": true,
-  "layer": "top",
-  "position": "left",
-  "spacing": 0,
-  "width": 0,
-  "height": 12,
-  "modules-center": ["hyprland/workspaces","custom/separator", "clock"],
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "◯",
-      "active": "◉",
+[
+  {
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "left",
+    "fixed-center": "true",
+    "spacing": 0,
+    "width": 0,
+    "height": 12,
+    "modules-center": ["hyprland/workspaces", "custom/separator", "clock"],
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{icon}",
+      "format-icons": {
+        "default": "◯",
+        "active": "◉",
+      },
+    },
+    "custom/separator": {
+      "format": "|",
+      "interval": "once",
+      "tooltip": false,
+    },
+    "clock": {
+      "format": "{:%I\n%M}",
+      "tooltip": false,
     },
   },
-"custom/separator": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false
-},
-  "clock": {
-    "format": "{:%I\n%M}",
-    "tooltip": false,
+  {
+    "position": "top",
+    "layer": "top",
+    "modules-center": [""],
+    "custom/song": {
+      "exec": "~/.config/waybar/scripts/song-title.sh",
+      "interval": 1,
+      "tooltip": false,
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl previous",
+      "on-scroll-down": "playerctl next",
+    },
   },
-}
-
-
+]
